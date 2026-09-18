@@ -1,0 +1,856 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1784798208195,361,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,47,0,2
+1784798208561,156,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,24,0,3
+1784798208718,429,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,1,1,https://failure.com,39,0,3
+1784798209149,354,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,1,1,https://failure.com,48,0,4
+1784798209504,201,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,1,1,https://failure.com,9,0,3
+1784798209707,218,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,1,1,https://failure.com,37,0,5
+1784798209927,354,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,1,1,https://failure.com,35,0,1
+1784798210283,78,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,23,0,3
+1784798210364,331,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,25,0,5
+1784798210697,437,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,31,0,3
+1784798211137,172,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,9,0,3
+1784798211311,206,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,1,1,https://failure.com,32,0,3
+1784798211519,470,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,1,1,https://failure.com,9,0,3
+1784798211993,137,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,1,1,https://failure.com,25,0,3
+1784798212133,332,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,1,1,https://failure.com,48,0,2
+1784798212467,207,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,1,1,https://failure.com,43,0,1
+1784798212677,346,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,22,0,5
+1784798213028,97,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,44,0,2
+1784798213127,132,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,31,0,3
+1784798212899,421,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,23,0,2
+1784798213262,339,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,14,0,2
+1784798213321,478,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,32,0,5
+1784798213603,256,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,39,0,4
+1784798213860,171,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,21,0,1
+1784798213800,281,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,42,0,4
+1784798214034,130,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,28,0,1
+1784798214166,108,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,43,0,2
+1784798214276,111,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,28,0,5
+1784798214083,411,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,4,0,2
+1784798214389,208,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,2,0,5
+1784798214598,72,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,30,0,5
+1784798214495,491,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,14,0,2
+1784798214672,460,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,1,0,3
+1784798214988,291,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,1,0,3
+1784798215135,288,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,2,0,1
+1784798215281,238,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,3,0,5
+1784798215520,245,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,33,0,4
+1784798215426,438,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,25,0,3
+1784798215866,234,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,4,0,3
+1784798215767,460,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,22,0,4
+1784798216229,121,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,2
+1784798216352,242,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,43,0,5
+1784798216101,496,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,14,0,2
+1784798216599,161,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,5
+1784798216596,403,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,1
+1784798216762,403,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,4
+1784798217002,272,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,2,0,4
+1784798217276,148,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,15,0,5
+1784798217165,401,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,2
+1784798217425,437,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,22,0,3
+1784798217864,98,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,32,0,2
+1784798217567,485,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,35,0,3
+1784798218053,104,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,44,0,2
+1784798217964,234,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,40,0,3
+1784798218159,340,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,43,0,2
+1784798218213,480,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,37,0,3
+1784798218500,463,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,15,0,4
+1784798218695,435,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,26,0,1
+1784798219131,300,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,5
+1784798218965,467,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,7,0,3
+1784798219433,280,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,7,0,2
+1784798219433,303,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,3
+1784798219714,238,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,11,0,1
+1784798219737,445,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,26,0,3
+1784798219954,282,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,6,0,3
+1784798220237,198,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,49,0,1
+1784798220437,140,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,22,0,5
+1784798220186,439,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,26,0,3
+1784798220579,435,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,44,0,1
+1784798220628,429,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,34,0,5
+1784798221058,87,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,31,0,1
+1784798221147,130,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,23,0,3
+1784798221017,314,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,21,0,4
+1784798221332,245,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,36,0,1
+1784798221278,326,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,5
+1784798221605,409,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,22,0,2
+1784798221578,470,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,22,0,5
+1784798222049,76,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,40,0,3
+1784798222016,232,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,14,0,3
+1784798222127,271,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,23,0,3
+1784798222398,56,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,18,0,3
+1784798222249,229,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,7,0,3
+1784798222455,112,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,49,0,1
+1784798222568,176,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,6,0,2
+1784798222479,334,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,30,0,4
+1784798222745,148,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,25,0,5
+1784798222894,127,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,16,0,4
+1784798222815,456,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,8,0,2
+1784798223021,291,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,47,0,2
+1784798223274,83,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,34,0,2
+1784798223313,119,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,43,0,3
+1784798223360,378,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,28,0,1
+1784798223438,307,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,43,0,3
+1784798223738,67,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,38,0,3
+1784798223806,64,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,18,0,1
+1784798223745,407,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,25,0,4
+1784798224154,167,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,35,0,2
+1784798223872,475,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,8,0,2
+1784798224349,52,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,45,0,4
+1784798224322,377,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,2,0,3
+1784798224403,434,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,14,0,4
+1784798224700,360,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,35,0,3
+1784798224838,399,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,12,0,4
+1784798225061,243,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,12,0,2
+1784798225238,232,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,2
+1784798225305,397,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,33,0,5
+1784798225471,433,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,24,0,2
+1784798225703,329,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,40,0,2
+1784798225906,489,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,16,0,1
+1784798226036,418,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,32,0,1
+1784798226456,99,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,44,0,3
+1784798226397,364,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,26,0,4
+1784798226556,433,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,41,0,2
+1784798226762,297,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,31,0,4
+1784798227061,215,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,12,0,1
+1784798226991,376,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,16,0,4
+1784798227277,320,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,9,0,4
+1784798227369,349,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,3,0,2
+1784798227599,164,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,41,0,5
+1784798227720,321,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,45,0,3
+1784798227765,363,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,49,0,4
+1784798228129,115,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,31,0,3
+1784798228042,415,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,3,0,5
+1784798228246,372,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,33,0,1
+1784798228457,236,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,9,0,3
+1784798228694,238,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,37,0,3
+1784798228933,131,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,36,0,5
+1784798228618,477,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,19,0,2
+1784798229065,225,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,12,0,4
+1784798229096,197,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,35,0,1
+1784798229296,417,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,12,0,4
+1784798229294,467,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,8,0,3
+1784798229713,257,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,1,0,5
+1784798229762,416,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,16,0,2
+1784798229970,326,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,49,0,3
+1784798230297,295,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,6,0,2
+1784798230178,479,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,43,0,3
+1784798230657,188,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,20,0,3
+1784798230846,156,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,15,0,1
+1784798230593,447,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,27,0,3
+1784798231003,195,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,27,0,5
+1784798231199,56,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,39,0,5
+1784798231041,425,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,22,0,4
+1784798231257,379,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,13,0,2
+1784798231468,180,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,25,0,1
+1784798231638,396,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,17,0,5
+1784798231649,441,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,11,0,1
+1784798232040,164,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,41,0,5
+1784798232091,405,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,8,0,1
+1784798232497,125,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,20,0,1
+1784798232204,419,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,45,0,4
+1784798232623,254,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,37,0,3
+1784798232624,404,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,1,0,2
+1784798232878,200,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,7,0,5
+1784798233030,154,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,8,0,3
+1784798233186,86,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,8,0,5
+1784798233080,242,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,34,0,1
+1784798233273,214,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,24,0,3
+1784798233488,112,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,12,0,1
+1784798233325,322,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,36,0,1
+1784798233601,153,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,39,0,5
+1784798233649,161,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,42,0,1
+1784798233756,81,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,41,0,5
+1784798233811,238,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,37,0,3
+1784798233837,312,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,27,0,3
+1784798234150,82,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,28,0,1
+1784798234050,305,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,11,0,5
+1784798234233,306,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,34,0,5
+1784798234356,257,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,15,0,4
+1784798234614,135,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,47,0,2
+1784798234539,458,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,47,0,2
+1784798234750,497,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,32,0,1
+1784798234998,403,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,47,0,2
+1784798235403,262,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,7,0,5
+1784798235248,452,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,36,0,3
+1784798235665,281,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,34,0,4
+1784798235947,170,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,23,0,4
+1784798235701,430,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,14,0,3
+1784798236132,135,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,22,0,4
+1784798236118,163,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,8,0,4
+1784798236268,57,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,12,0,5
+1784798236282,136,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,48,0,5
+1784798236423,271,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,22,0,5
+1784798236327,436,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,12,0,2
+1784798236764,257,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,31,0,5
+1784798236695,446,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,36,0,3
+1784798237023,312,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,8,0,4
+1784798237337,64,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,33,0,5
+1784798237142,341,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,28,0,1
+1784798237402,84,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,12,0,1
+1784798237487,248,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,42,0,4
+1784798237484,269,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,23,0,5
+1784798237735,104,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,25,0,3
+1784798237841,393,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,1
+1784798237754,493,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,33,0,4
+1784798238239,364,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,3
+1784798238249,474,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,22,0,3
+1784798238604,235,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,3
+1784798238724,339,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,44,0,4
+1784798238839,225,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,1,0,4
+1784798239064,254,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,18,0,1
+1784798239064,343,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,3,0,1
+1784798239408,258,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,13,0,2
+1784798239319,461,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,48,0,2
+1784798239667,336,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,26,0,4
+1784798239782,398,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,30,0,1
+1784798240005,422,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,14,0,3
+1784798240182,302,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,31,0,3
+1784798240428,373,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,19,0,2
+1784798240486,358,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,30,0,5
+1784798240845,288,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,3,0,3
+1784798240803,380,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,3
+1784798241134,277,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,44,0,4
+1784798241184,367,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,16,0,3
+1784798241553,104,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,42,0,3
+1784798241658,99,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,34,0,2
+1784798241413,472,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,46,0,1
+1784798241887,69,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,27,0,4
+1784798241958,61,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,33,0,1
+1784798241759,368,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,37,0,1
+1784798242021,425,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,22,0,2
+1784798242129,411,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,2,0,3
+1784798242541,93,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,43,0,1
+1784798242635,65,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,41,0,3
+1784798242448,350,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,21,0,2
+1784798242702,339,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,36,0,3
+1784798243042,76,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,17,0,2
+1784798242800,492,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,23,0,3
+1784798243120,474,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,45,0,2
+1784798243294,474,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,20,0,2
+1784798243595,184,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,42,0,4
+1784798243770,423,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,27,0,1
+1784798243780,441,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,47,0,2
+1784798244221,345,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,33,0,2
+1784798244195,382,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,5
+1784798244580,54,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,34,0,1
+1784798244567,86,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,26,0,3
+1784798244635,103,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,35,0,4
+1784798244739,75,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,5,0,2
+1784798244654,165,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,23,0,5
+1784798244817,133,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,40,0,1
+1784798244821,423,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,14,0,2
+1784798244952,428,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,4,0,2
+1784798245246,193,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,31,0,2
+1784798245381,106,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,16,0,3
+1784798245441,312,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,10,0,2
+1784798245489,403,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,19,0,3
+1784798245754,201,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,1,0,2
+1784798245893,201,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,21,0,2
+1784798245958,206,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,19,0,5
+1784798246095,114,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,32,0,5
+1784798246211,115,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,26,0,2
+1784798246166,418,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,25,0,2
+1784798246586,163,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,20,0,4
+1784798246328,496,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,1
+1784798246751,82,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,47,0,2
+1784798246825,120,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,8,0,4
+1784798246946,213,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,31,0,1
+1784798246835,376,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,33,0,5
+1784798247160,438,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,34,0,4
+1784798247212,405,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,7,0,2
+1784798247620,75,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,9,0,4
+1784798247601,149,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,6,0,3
+1784798247751,238,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,4,0,5
+1784798247696,352,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,25,0,5
+1784798247991,179,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,50,0,1
+1784798248049,215,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,15,0,5
+1784798248171,372,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,45,0,5
+1784798248265,494,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,12,0,4
+1784798248544,236,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,6,0,4
+1784798248782,72,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,25,0,2
+1784798248761,213,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,4,0,3
+1784798248855,163,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,36,0,2
+1784798249019,321,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,36,0,5
+1784798248975,486,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,17,0,2
+1784798249462,120,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,42,0,4
+1784798249342,257,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,10,0,1
+1784798249601,96,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,13,0,5
+1784798249699,62,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,23,0,4
+1784798249762,152,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,20,0,5
+1784798249584,372,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,43,0,4
+1784798249915,329,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,36,0,5
+1784798250248,59,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,2
+1784798249960,356,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,8,0,5
+1784798250308,92,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,29,0,1
+1784798250318,197,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,16,0,4
+1784798250402,335,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,1
+1784798250517,266,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,28,0,5
+1784798250738,371,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,4
+1784798250785,401,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,14,0,3
+1784798251188,308,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,17,0,2
+1784798251111,405,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,33,0,1
+1784798251516,236,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,49,0,3
+1784798251497,268,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,40,0,3
+1784798251753,193,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,5,0,4
+1784798251766,327,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,37,0,2
+1784798251947,277,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,42,0,4
+1784798252094,205,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,22,0,1
+1784798252301,235,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,13,0,1
+1784798252225,473,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,32,0,1
+1784798252537,405,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,45,0,4
+1784798252700,459,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,23,0,3
+1784798252944,224,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,34,0,4
+1784798253161,74,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,3,0,5
+1784798253169,167,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,12,0,3
+1784798253238,197,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,4
+1784798253337,183,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,22,0,4
+1784798253521,107,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,6,0,2
+1784798253435,461,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,44,0,1
+1784798253629,390,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,45,0,3
+1784798253897,275,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,14,0,4
+1784798254020,407,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,44,0,5
+1784798254174,382,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,48,0,5
+1784798254558,153,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,14,0,2
+1784798254429,329,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,49,0,1
+1784798254713,106,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,19,0,3
+1784798254759,147,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,1
+1784798254821,175,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,26,0,3
+1784798254998,100,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,33,0,1
+1784798254908,425,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,28,0,1
+1784798255100,449,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,11,0,2
+1784798255334,287,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,8,0,5
+1784798255623,221,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,7,0,5
+1784798255551,414,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,32,0,1
+1784798255845,153,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,12,0,2
+1784798256000,107,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,30,0,1
+1784798256111,141,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,36,0,3
+1784798255966,466,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,36,0,1
+1784798256253,239,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,35,0,1
+1784798256433,138,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,6,0,3
+1784798256572,195,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,28,0,2
+1784798256493,496,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,33,0,1
+1784798256990,69,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,42,0,1
+1784798256768,316,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,19,0,4
+1784798257085,164,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,46,0,1
+1784798257250,292,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,19,0,2
+1784798257060,486,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,13,0,3
+1784798257547,147,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,11,0,4
+1784798257543,330,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,16,0,4
+1784798257695,318,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,23,0,1
+1784798257873,187,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,4,0,5
+1784798258013,55,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,43,0,3
+1784798258060,243,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,3,0,5
+1784798258069,341,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,1,0,4
+1784798258304,280,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,46,0,5
+1784798258411,395,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,15,0,4
+1784798258584,439,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,15,0,1
+1784798259023,187,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,18,0,4
+1784798258806,428,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,15,0,4
+1784798259211,140,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,22,0,1
+1784798259353,76,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,12,0,2
+1784798259236,281,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,44,0,1
+1784798259431,194,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,4
+1784798259519,113,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,30,0,1
+1784798259626,356,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,6,0,2
+1784798259633,478,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,5,0,5
+1784798259983,188,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,35,0,3
+1784798260171,141,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,26,0,1
+1784798260312,202,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,49,0,4
+1784798260111,483,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,26,0,5
+1784798260594,170,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,29,0,5
+1784798260514,492,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,37,0,1
+1784798260765,462,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,12,0,5
+1784798261008,456,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,27,0,4
+1784798261229,323,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,3
+1784798261553,171,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,32,0,3
+1784798261466,502,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,21,0,4
+1784798261726,287,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,1
+1784798261969,190,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,49,0,1
+1784798262015,170,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,33,0,4
+1784798262160,68,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,20,0,3
+1784798262186,188,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,22,0,2
+1784798262230,318,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,43,0,3
+1784798262375,202,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,9,0,1
+1784798262578,78,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,10,0,1
+1784798262548,313,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,35,0,5
+1784798262658,267,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,8,0,4
+1784798262863,246,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,1,0,1
+1784798263109,192,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,5,0,4
+1784798262926,386,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,23,0,4
+1784798263302,291,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,2,0,3
+1784798263312,473,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,48,0,1
+1784798263594,451,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,13,0,2
+1784798264046,180,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,43,0,3
+1784798263787,484,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,2
+1784798264228,366,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,29,0,5
+1784798264272,356,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,19,0,1
+1784798264629,148,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,47,0,2
+1784798264779,73,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,35,0,5
+1784798264596,475,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,2,0,4
+1784798264854,445,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,23,0,4
+1784798265072,381,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,6,0,4
+1784798265300,256,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,24,0,4
+1784798265454,374,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,20,0,3
+1784798265829,141,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,2,0,1
+1784798265558,460,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,50,0,4
+1784798266020,234,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,12,0,1
+1784798265971,424,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,2,0,4
+1784798266255,202,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,32,0,2
+1784798266396,337,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,3
+1784798266458,479,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,49,0,2
+1784798266734,293,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,3
+1784798266939,206,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,42,0,5
+1784798267028,377,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,30,0,2
+1784798267146,378,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,47,0,4
+1784798267406,180,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,14,0,3
+1784798267525,72,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,27,0,1
+1784798267598,158,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,23,0,1
+1784798267757,249,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,46,0,5
+1784798267586,502,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,37,0,1
+1784798268010,113,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,6,0,2
+1784798268088,85,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,44,0,2
+1784798268125,117,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,1,0,1
+1784798268243,86,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,40,0,3
+1784798268174,343,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,38,0,5
+1784798268517,60,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,5,0,3
+1784798268330,437,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,36,0,3
+1784798268578,193,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,17,0,1
+1784798268772,67,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,23,0,1
+1784798268840,213,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,23,0,5
+1784798268769,390,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,47,0,3
+1784798269055,168,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,27,0,2
+1784798269160,315,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,6,0,3
+1784798269224,378,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,26,0,2
+1784798269476,309,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,19,0,2
+1784798269602,333,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,28,0,3
+1784798269786,421,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,37,0,5
+1784798269937,286,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,49,0,2
+1784798270224,291,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,5,0,1
+1784798270208,382,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,2,0,1
+1784798270592,115,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,12,0,4
+1784798270517,318,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,44,0,2
+1784798270836,366,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,26,0,3
+1784798270708,502,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,21,0,3
+1784798271204,128,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,22,0,5
+1784798271211,225,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,26,0,3
+1784798271437,267,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,24,0,4
+1784798271334,393,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,2
+1784798271705,277,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,42,0,5
+1784798271984,72,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,39,0,2
+1784798272058,74,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,44,0,5
+1784798271728,429,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,34,0,1
+1784798272159,75,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,26,0,4
+1784798272133,306,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,11,0,2
+1784798272441,101,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,2,0,5
+1784798272235,363,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,27,0,4
+1784798272542,347,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,5
+1784798272599,372,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,50,0,5
+1784798272974,127,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,12,0,5
+1784798272892,380,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,32,0,5
+1784798273274,208,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,26,0,5
+1784798273103,381,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,40,0,5
+1784798273483,65,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,17,0,5
+1784798273484,457,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,32,0,4
+1784798273548,479,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,26,0,3
+1784798273942,415,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,49,0,1
+1784798274029,374,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,4,0,2
+1784798274359,72,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,43,0,2
+1784798274433,320,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,40,0,4
+1784798274404,385,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,42,0,4
+1784798274791,181,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,4,0,3
+1784798274754,370,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,42,0,3
+1784798274974,380,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,2
+1784798275126,391,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,22,0,4
+1784798275518,205,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,8,0,3
+1784798275355,435,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,43,0,1
+1784798275724,372,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,10,0,2
+1784798275791,353,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,13,0,1
+1784798276096,418,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,46,0,1
+1784798276145,392,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,49,0,4
+1784798276514,197,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,6,0,2
+1784798276712,172,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,34,0,3
+1784798276537,478,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,40,0,1
+1784798276884,265,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,40,0,3
+1784798277150,115,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,42,0,4
+1784798277015,493,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,2,0,3
+1784798277266,491,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,16,0,5
+1784798277759,67,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,41,0,4
+1784798277515,346,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,2,0,4
+1784798277862,75,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,36,0,2
+1784798277937,153,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,38,0,3
+1784798278090,103,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,3
+1784798277828,495,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,13,0,3
+1784798278324,143,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,35,0,5
+1784798278193,361,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,32,0,5
+1784798278555,72,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,25,0,4
+1784798278627,235,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,23,0,5
+1784798278468,407,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,39,0,4
+1784798278862,57,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,18,0,4
+1784798278920,164,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,4,0,3
+1784798278876,448,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,4,0,3
+1784798279085,442,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,46,0,2
+1784798279324,442,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,2
+1784798279528,341,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,5,0,1
+1784798279870,140,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,44,0,4
+1784798280013,84,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,36,0,2
+1784798279767,362,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,42,0,1
+1784798280131,299,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,34,0,2
+1784798280098,465,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,7,0,2
+1784798280432,171,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,7,0,4
+1784798280603,126,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,15,0,1
+1784798280730,101,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,12,0,2
+1784798280563,368,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,11,0,4
+1784798280832,148,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,1,0,1
+1784798280932,213,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,22,0,5
+1784798280981,221,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,16,0,3
+1784798281204,259,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,14,0,5
+1784798281146,434,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,23,0,2
+1784798281581,157,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,5
+1784798281464,309,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,16,0,1
+1784798281740,169,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,10,0,3
+1784798281910,154,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,25,0,2
+1784798281775,488,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,4
+1784798282066,341,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,19,0,3
+1784798282266,173,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,42,0,3
+1784798282408,102,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,44,0,1
+1784798282440,407,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,20,0,2
+1784798282511,502,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,14,0,3
+1784798282847,360,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,35,0,5
+1784798283013,456,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,44,0,5
+1784798283469,105,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,32,0,3
+1784798283208,389,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,37,0,2
+1784798283575,69,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,35,0,1
+1784798283598,203,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,50,0,2
+1784798283645,167,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,15,0,3
+1784798283814,100,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,26,0,1
+1784798283916,95,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,46,0,4
+1784798283802,426,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,34,0,3
+1784798284012,221,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,9,0,5
+1784798284234,85,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,46,0,4
+1784798284320,188,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,43,0,5
+1784798284229,307,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,17,0,4
+1784798284509,132,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,41,0,4
+1784798284536,216,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,27,0,4
+1784798284642,213,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,28,0,2
+1784798284754,359,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,22,0,3
+1784798284856,339,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,10,0,5
+1784798285115,124,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,47,0,5
+1784798285196,91,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,3
+1784798285288,296,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,4,0,4
+1784798285240,454,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,49,0,2
+1784798285585,424,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,48,0,4
+1784798285695,341,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,44,0,4
+1784798286037,92,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,21,0,3
+1784798286013,293,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,5,0,2
+1784798286307,145,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,47,0,5
+1784798286129,384,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,10,0,5
+1784798286514,229,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,12,0,4
+1784798286453,362,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,15,0,4
+1784798286744,175,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,30,0,4
+1784798286920,95,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,2,0,5
+1784798286817,263,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,49,0,4
+1784798287016,167,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,4,0,2
+1784798287184,77,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,13,0,4
+1784798287081,378,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,4,0,2
+1784798287460,91,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,5,0,5
+1784798287262,349,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,8,0,3
+1784798287613,229,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,24,0,1
+1784798287552,346,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,47,0,5
+1784798287844,193,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,13,0,4
+1784798287900,273,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,3,0,3
+1784798288038,396,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,38,0,3
+1784798288174,404,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,39,0,3
+1784798288435,349,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,3,0,2
+1784798288579,373,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,12,0,5
+1784798288953,106,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,21,0,5
+1784798289060,112,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,30,0,1
+1784798288785,447,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,1,0,5
+1784798289233,131,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,25,0,4
+1784798289173,459,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,20,0,5
+1784798289365,299,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,38,0,4
+1784798289633,346,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,24,0,3
+1784798289980,125,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,14,0,1
+1784798289664,490,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,9,0,4
+1784798290155,207,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,14,0,3
+1784798290106,371,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,4
+1784798290363,302,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,44,0,5
+1784798290478,272,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,28,0,3
+1784798290751,255,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,17,0,3
+1784798290667,382,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,4
+1784798291008,140,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,12,0,2
+1784798291149,177,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,9,0,4
+1784798291327,118,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,50,0,3
+1784798291050,421,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,5
+1784798291446,84,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,39,0,1
+1784798291471,201,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,4
+1784798291531,449,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,38,0,5
+1784798291672,486,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,17,0,4
+1784798292159,59,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,23,0,5
+1784798292219,154,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,1,0,5
+1784798292374,61,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,27,0,5
+1784798291980,504,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,1
+1784798292485,288,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,5
+1784798292436,447,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,35,0,1
+1784798292883,160,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,43,0,5
+1784798292773,333,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,20,0,2
+1784798293108,140,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,29,0,4
+1784798293044,283,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,31,0,3
+1784798293328,212,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,7,0,1
+1784798293541,152,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,20,0,2
+1784798293250,459,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,13,0,1
+1784798293694,376,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,23,0,5
+1784798293711,498,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,14,0,3
+1784798294210,198,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,10,0,1
+1784798294410,104,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,2,0,4
+1784798294071,460,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,31,0,2
+1784798294514,205,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,26,0,1
+1784798294721,60,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,14,0,5
+1784798294532,370,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,23,0,5
+1784798294783,121,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,23,0,1
+1784798294904,174,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,30,0,1
+1784798295080,69,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,5
+1784798294905,337,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,12,0,2
+1784798295150,139,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,16,0,4
+1784798295243,103,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,18,0,5
+1784798295347,121,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,39,0,3
+1784798295290,368,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,3
+1784798295659,262,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,13,0,3
+1784798295470,502,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,5,0,4
+1784798295922,231,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,42,0,5
+1784798295973,358,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,38,0,1
+1784798296154,422,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,33,0,3
+1784798296332,249,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,1
+1784798296582,100,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,42,0,2
+1784798296577,362,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,20,0,4
+1784798296940,84,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,38,0,4
+1784798296683,438,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,5,0,5
+1784798297122,62,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,10,0,2
+1784798297025,353,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,29,0,1
+1784798297185,410,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,3,0,5
+1784798297380,407,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,31,0,3
+1784798297789,217,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,1
+1784798297597,480,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,8,0,4
+1784798298079,197,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,34,0,3
+1784798298009,305,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,4,0,2
+1784798298277,296,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,21,0,4
+1784798298316,388,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,36,0,2
+1784798298574,220,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,11,0,1
+1784798298706,92,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,8,0,3
+1784798298795,92,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,30,0,4
+1784798298800,282,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,20,0,2
+1784798298889,396,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,4,0,4
+1784798299083,253,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,41,0,5
+1784798299337,193,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,46,0,3
+1784798299531,78,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,2
+1784798299286,391,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,48,0,5
+1784798299610,321,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,37,0,2
+1784798299678,473,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,20,0,3
+1784798299932,238,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,9,0,5
+1784798300171,159,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,33,0,5
+1784798300151,393,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,49,0,5
+1784798300331,312,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,37,0,4
+1784798300545,155,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,17,0,5
+1784798300702,170,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,17,0,5
+1784798300644,343,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,33,0,4
+1784798300873,387,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,17,0,2
+1784798301261,95,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,43,0,4
+1784798300988,404,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,21,0,5
+1784798301393,228,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,30,0,3
+1784798301357,360,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,5,0,1
+1784798301622,121,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,3
+1784798301744,99,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,46,0,3
+1784798301718,416,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,25,0,3
+1784798301844,290,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,6,0,1
+1784798302135,213,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,28,0,4
+1784798302350,211,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,12,0,3
+1784798302135,451,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,49,0,5
+1784798302586,141,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,20,0,5
+1784798302562,312,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,15,0,3
+1784798302874,70,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,24,0,2
+1784798302727,293,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,25,0,3
+1784798302945,247,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,32,0,1
+1784798303024,195,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,34,0,2
+1784798303193,313,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,2,0,3
+1784798303220,332,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,42,0,3
+1784798303553,347,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,48,0,2
+1784798303506,419,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,14,0,1
+1784798303901,76,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,40,0,4
+1784798303927,71,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,4,0,5
+1784798304000,80,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,2,0,3
+1784798303978,430,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,44,0,3
+1784798304083,343,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,38,0,4
+1784798304410,339,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,50,0,3
+1784798304427,417,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,7,0,4
+1784798304751,254,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,27,0,3
+1784798304845,419,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,7,0,2
+1784798305265,72,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,11,0,3
+1784798305007,451,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,43,0,3
+1784798305459,225,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,29,0,3
+1784798305338,415,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,4,0,1
+1784798305754,176,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,16,0,3
+1784798305932,55,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,39,0,4
+1784798305686,496,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,42,0,3
+1784798305989,412,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,50,0,1
+1784798306183,303,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,40,0,4
+1784798306401,205,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,42,0,1
+1784798306486,225,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,30,0,4
+1784798306607,249,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,4,0,2
+1784798306711,409,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,39,0,5
+1784798306856,271,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,17,0,1
+1784798307127,174,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,14,0,2
+1784798307121,464,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,8,0,1
+1784798307302,288,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,30,0,5
+1784798307586,73,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,7,0,5
+1784798307660,91,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,33,0,2
+1784798307590,203,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,16,0,3
+1784798307752,430,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,8,0,5
+1784798307794,407,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,28,0,2
+1784798308184,160,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,35,0,4
+1784798308202,294,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,49,0,5
+1784798308345,249,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,11,0,5
+1784798308496,453,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,29,0,5
+1784798308594,375,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,34,0,5
+1784798308951,367,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,35,0,5
+1784798308970,435,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,40,0,2
+1784798309319,305,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,20,0,2
+1784798309625,109,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,5,0,1
+1784798309405,396,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,6,0,5
+1784798309805,182,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,36,0,4
+1784798309734,457,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,32,0,5
+1784798310195,184,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,27,0,5
+1784798309992,462,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,8,0,2
+1784798310380,122,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,28,0,3
+1784798310454,173,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,46,0,5
+1784798310503,297,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,25,0,3
+1784798310801,175,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,3
+1784798310628,468,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,22,0,5
+1784798311097,86,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,43,0,2
+1784798310977,263,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,37,0,4
+1784798311241,314,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,30,0,3
+1784798311184,397,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,41,0,4
+1784798311557,419,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,29,0,3
+1784798311582,473,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,47,0,2
+1784798311977,123,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,43,0,5
+1784798312100,235,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,19,0,2
+1784798312056,335,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,1
+1784798312391,128,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,13,0,3
+1784798312336,406,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,19,0,5
+1784798312519,293,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,30,0,4
+1784798312744,164,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,44,0,2
+1784798312814,121,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,41,0,2
+1784798312909,229,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,38,0,4
+1784798312936,213,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,4,0,5
+1784798313149,98,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,30,0,2
+1784798313139,250,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,28,0,4
+1784798313390,72,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,37,0,3
+1784798313248,240,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,22,0,2
+1784798313463,91,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,11,0,5
+1784798313489,159,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,15,0,5
+1784798313554,188,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,34,0,3
+1784798313743,118,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,30,0,4
+1784798313648,387,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,25,0,4
+1784798314036,82,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,10,0,3
+1784798313863,292,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,16,0,1
+1784798314118,469,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,20,0,2
+1784798314156,458,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,41,0,1
+1784798314615,207,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,7,0,5
+1784798314824,66,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,49,0,3
+1784798314587,412,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,47,0,4
+1784798314891,196,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,14,0,3
+1784798315000,300,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,6,0,3
+1784798315087,384,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,20,0,2
+1784798315301,222,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,2,0,3
+1784798315472,122,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,30,0,4
+1784798315524,488,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,14,0,1
+1784798315595,456,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,37,0,4
+1784798316053,432,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,8,0,3
+1784798316017,491,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,28,0,5
+1784798316487,178,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,43,0,1
+1784798316509,169,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,10,0,3
+1784798316667,248,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,36,0,2
+1784798316679,410,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,1
+1784798316917,186,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,32,0,5
+1784798317090,227,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,9,0,2
+1784798317104,246,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,10,0,3
+1784798317352,326,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,39,0,5
+1784798317318,477,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,47,0,3
+1784798317679,117,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,11,0,5
+1784798317797,183,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,11,0,2
+1784798317796,375,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,29,0,3
+1784798317981,388,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,40,0,2
+1784798318172,406,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,17,0,2
+1784798318370,410,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,49,0,1
+1784798318579,440,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,22,0,3
+1784798318781,365,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,21,0,4
+1784798319020,434,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,39,0,1
+1784798319147,402,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,20,0,1
+1784798319550,222,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,6,0,4
+1784798319455,484,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,37,0,1
+1784798319772,242,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,50,0,2
+1784798319940,168,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,3
+1784798320015,305,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,6,0,2
+1784798320108,427,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,31,0,4
+1784798320321,312,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,28,0,5
+1784798320634,254,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,13,0,1
+1784798320536,491,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,17,0,3
+1784798321028,113,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,13,0,1
+1784798320889,331,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,21,0,4
+1784798321221,93,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,27,0,5
+1784798321315,119,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,9,0,4
+1784798321142,311,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,26,0,4
+1784798321435,147,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,14,0,1
+1784798321454,209,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,29,0,1
+1784798321583,214,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,11,0,1
+1784798321664,293,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,41,0,2
+1784798321958,243,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,49,0,2
+1784798321798,445,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,19,0,3
+1784798322244,153,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,21,0,1
+1784798322203,366,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,16,0,4
+1784798322398,274,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,45,0,3
+1784798322570,105,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,13,0,5
+1784798322672,58,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,25,0,5
+1784798322674,410,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,2,0,4
+1784798322731,376,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,1,0,5
+1784798323085,201,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,18,0,1
+1784798323287,143,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,46,0,3
+1784798323107,498,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,6,0,3
+1784798323605,218,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,22,0,1
+1784798323430,427,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,32,0,4
+1784798323823,151,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,35,0,3
+1784798323975,351,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,27,0,4
+1784798323858,475,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,11,0,5
+1784798324327,183,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,30,0,5
+1784798324512,192,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,6,0,4
+1784798324705,66,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,4
+1784798324334,503,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,16,0,1
+1784798324772,252,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,10,0,2
+1784798325025,65,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,46,0,1
+1784798324837,487,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,14,0,4
+1784798325091,268,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,29,0,4
+1784798325324,173,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,9,0,4
+1784798325359,225,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,27,0,5
+1784798325498,174,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,28,0,3
+1784798325584,259,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,6,0,3
+1784798325845,204,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,18,0,4
+1784798325673,469,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,9,0,2
+1784798326050,128,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,48,0,3
+1784798326179,70,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,23,0,4
+1784798326143,146,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,2,2,https://failure.com,26,0,5
+1784798326290,70,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,20,0,2,2,https://failure.com,6,0,2
+1784798326250,118,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,24,0,2
+1784798326361,79,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,26,0,5
+1784798326368,222,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,2,2,https://failure.com,13,0,4
+1784798326441,429,FailureSample,504,Gateway Timeout,Thread Group 1-2,text,false,,14,0,2,2,https://failure.com,48,0,5
+1784798326591,485,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,2,2,https://failure.com,30,0,3
+1784798326870,244,FailureSample,403,Bad Request,Thread Group 1-2,text,false,,26,0,2,2,https://failure.com,45,0,1
+1784798327114,60,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,1,0,1
+1784798327175,279,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,23,0,5
+1784798327077,481,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,25,0,2
+1784798327559,91,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,2,2,https://failure.com,18,0,1
+1784798327652,139,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,2,2,https://failure.com,10,0,2
+1784798327455,346,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,2,2,http://success.com,47,0,5
+1784798327792,91,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,40,0,4
+1784798327884,229,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,2,2,http://success.com,21,0,3
+1784798327802,370,FailureSample,500,Internal Server Error,Thread Group 1-2,text,false,,18,0,1,1,https://failure.com,9,0,1

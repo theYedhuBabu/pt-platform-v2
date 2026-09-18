@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS Projects (
+		ID TEXT PRIMARY KEY,
+		ProjectName TEXT NOT NULL,
+		ClientName TEXT NOT NULL,
+		Environmenr TEXT NOT NULL,
+		Description TEXT NOT NULL,
+		Key TEXT NOT NULL,
+		CreatedAt DATETIME NOT NULL,
+		UpdatedAt DATETIME NOT NULL,
+		STATUS BOOLEAN,
+	);`

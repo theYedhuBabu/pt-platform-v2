@@ -1,0 +1,207 @@
+const map: Record<string, string> = {
+  passed: 'PASSED',
+  failed: 'FAILED',
+  running: 'RUNNING',
+  queued: 'QUEUED',
+  connected: 'CONNECTED',
+  idle: 'IDLE',
+  offline: 'OFFLINE',
+  live: 'LIVE'
+};
+
+
+
+/* ============================================================
+   TypeScript interfaces for JMeter Executor
+   ============================================================ */
+
+/* ---- Framework Structure ---- */
+
+export interface LoadParam {
+  key: string;
+  value: string | number;
+  unit?: string;
+  sla?: boolean;
+}
+
+export interface JMXScript {
+  name: string;
+  description: string;
+  params: LoadParam[];
+}
+
+export interface EnvConfig {
+  env: string;
+  file: string;
+  params: Array<{ key: string; value: string }>;
+}
+
+export interface DataFile {
+  name: string;
+  env: string | null; // null = shared across all envs
+  rows: number;
+  size: string;
+}
+
+export interface Plugin {
+  name: string;
+  size: string;
+  description: string;
+}
+
+export interface UtilScript {
+  name: string;
+  size: string;
+}
+
+export interface FrameworkSource {
+  type: 'git' | 'upload';
+  repo?: string;
+  branch?: string;
+  lastPull?: string;
+  autoVersioned: boolean;
+}
+
+export interface FrameworkVersion {
+  v: string; // display version (e.g. "main · 2.1.0 · a3f9c1")
+  label: string; // semantic version (e.g. "2.1.0")
+  sha?: string; // git sha
+  branch?: string;
+  date: string; // YYYY-MM-DD
+  author: string;
+  note: string;
+  current: boolean;
+}
+
+export interface Framework {
+  id: string;
+  name: string;
+  description: string;
+  source: FrameworkSource;
+  versions: FrameworkVersion[];
+  envs: string[];
+  scripts: JMXScript[];
+  configs: EnvConfig[];
+  data: DataFile[];
+  plugins: Plugin[];
+  util: UtilScript[];
+}
+
+export interface FrameworkDetails extends Framework {
+  // All data needed when opening a specific framework detail page
+  // (extends Framework with no additional fields, but used as a type marker)
+}
+
+/* ---- Project ---- */
+
+export interface TestCategory {
+  id: string;
+  name: string;
+  type: 'native' | 'external_imports' | 'custom';
+  description: string;
+}
+
+export interface Project {
+  id: string;
+  name: string;
+  key: string;
+  description: string;
+  owner: string;
+  env: string;
+  created: string; // YYYY-MM-DD
+  frameworks: Framework[];
+  categories: TestCategory[];
+  tests: Test[];
+}
+
+/* ---- Test ---- */
+
+export interface ExternalImportSourceFile {
+  filename: string;
+  format: 'jmeter' | 'gatling' | 'other';
+  uploadedAt: string;
+  uploadedBy: string;
+  sampleCount: number;
+  size: string;
+}
+
+export interface NativeTest {
+  id: string;
+  name: string;
+  categoryId: string;
+  type: 'native';
+  frameworkId: string;
+  version: string;
+  script: string; // jmx filename
+  envName: string;
+  plugins: string[];
+  mode: 'single' | 'distributed';
+  runs: Run[];
+}
+
+export interface ExternalTest {
+  id: string;
+  name: string;
+  categoryId: string;
+  type: 'external_imports';
+  sourceFile: ExternalImportSourceFile;
+  linkedNativeTestId?: string; // optional link to a native test for comparison
+  runs: Run[];
+}
+
+export type Test = NativeTest | ExternalTest;
+
+/* ---- Run ---- */
+
+export interface Run {
+  id: string;
+  status: 'running' | 'passed' | 'failed';
+  started: string;
+  duration: string;
+  mode: 'single' | 'distributed' | 'none'; // 'none' for external imports
+  agents: string[];
+  rps: number;
+  errPct: number;
+  p95: number;
+  p99?: number;
+  samples: number;
+  live?: boolean; // true if currently running
+}
+
+/* ---- Agent ---- */
+
+export interface Agent {
+  id: string;
+  host: string;
+  region: string;
+  cpu: number;
+  mem: number;
+  status: 'connected' | 'idle' | 'offline';
+}
+
+/* ---- Live Metrics ---- */
+
+export interface MetricPoint {
+  ts: number; // unix timestamp
+  rps: number;
+  p95: number;
+  errPct: number;
+}
+
+export interface LiveRun {
+  runId: string;
+  testId: string;
+  projectId: string;
+  status: 'running' | 'stopping' | 'stopped';
+  startedAt: number;
+  metrics: MetricPoint[];
+  activeAgents: string[];
+  logLines: LogLine[];
+}
+
+export interface LogLine {
+  ts: string;
+  level: 'INFO' | 'WARN' | 'ERROR';
+  agent: string;
+  text: string;
+}

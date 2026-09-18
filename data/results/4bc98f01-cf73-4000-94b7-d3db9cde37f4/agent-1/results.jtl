@@ -1,0 +1,10 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1781524266993,190,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,34,0,3
+1781524267188,82,SuccessSample,200,OK,Thread Group 1-1,text,true,,114,0,1,1,http://success.com,1,0,5
+1781524267271,448,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,18,0,1,1,https://failure.com,35,0,1
+1781524267722,295,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,20,0,1,1,https://failure.com,12,0,4
+1781524268018,470,FailureSample,500,Internal Server Error,Thread Group 1-1,text,false,,26,0,1,1,https://failure.com,29,0,1
+1781524268489,158,FailureSample,504,Gateway Timeout,Thread Group 1-1,text,false,,14,0,1,1,https://failure.com,18,0,3
+1781524268650,171,FailureSample,403,Bad Request,Thread Group 1-1,text,false,,26,0,1,1,https://failure.com,45,0,1
+1781524271776,437,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,1,1,http://success.com,21,0,5
+1781524272215,242,SuccessSample,200,OK,Thread Group 1-2,text,true,,114,0,1,1,http://success.com,46,0,5

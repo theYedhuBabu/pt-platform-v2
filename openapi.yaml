@@ -1,0 +1,974 @@
+openapi: 3.0.3
+info:
+  title: JMeter Hub API
+  version: 1.0.0
+  description: |
+    REST + WebSocket API for the JMeter Hub platform.
+
+    The hub coordinates distributed JMeter load tests across a fleet of agents,
+    stores run history in SQLite, and streams live metrics via Kafka → WebSocket.
+
+    ## Architecture
+    - **Hub** — Go HTTP/WebSocket server on `:8080`, serves the frontend and manages agents.
+    - **Agents** — Go processes on remote hosts; receive commands and stream metrics back.
+    - **Frontend** — Vite + React + TypeScript; connects to hub via REST and WebSocket.
+
+    ## Notes
+    - All JSON fields use **camelCase** except `GET /api/history` which returns Go-default
+      PascalCase (marked as legacy — normalise in a future revision).
+    - `multipart/form-data` endpoints must **not** set `Content-Type` manually; let the browser set the boundary.
+    - All timestamps are ISO 8601 UTC strings.
+
+servers:
+  - url: http://localhost:8080
+    description: Local development
+
+tags:
+  - name: agents
+    description: Connected agent fleet
+  - name: projects
+    description: Project management
+  - name: tests
+    description: Tests within a project
+  - name: frameworks
+    description: Shared plugin/script bundles
+  - name: runs
+    description: Run lifecycle and history
+  - name: scripts
+    description: Script upload and JMX parsing
+
+paths:
+
+  # ── Agents ──────────────────────────────────────────────────────────────────
+
+  /api/agents:
+    get:
+      operationId: listAgents
+      summary: List connected agents
+      tags: [agents]
+      responses:
+        '200':
+          description: Connected agent IDs
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [agents]
+                properties:
+                  agents:
+                    type: array
+                    items:
+                      type: string
+                    example: ["agent-sydney-1", "agent-virginia-2"]
+
+  # ── Scripts ─────────────────────────────────────────────────────────────────
+
+  /api/parse-jmx:
+    post:
+      operationId: parseJmx
+      summary: Parse a JMX file and return required CSV names
+      description: |
+        Inspects the JMX test plan and extracts the filenames of any CSV data set
+        config elements. Call this before `POST /api/upload/script` so the client
+        knows which CSV files to include in the upload.
+      tags: [scripts]
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: JMeter test plan (.jmx)
+      responses:
+        '200':
+          description: CSV filenames required by this test plan
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [required_csvs]
+                properties:
+                  required_csvs:
+                    type: array
+                    items:
+                      type: string
+                    example: ["users.csv", "products.csv"]
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /api/upload/script:
+    post:
+      operationId: uploadScript
+      summary: Upload a JMX test plan and its data files
+      description: |
+        Upload the JMX file, all required CSV data files (from `parse-jmx`),
+        and a JSON config blob. The hub stores these assets and returns a `scriptName`
+        to reference when creating a test.
+
+        Form field layout:
+        - `file` — the `.jmx` plan
+        - `<csv_filename>` — one field per CSV (field name = csv filename, e.g. `users.csv`)
+        - `config` — a JSON string, e.g. `{"frameworkId":"fw-1"}`
+      tags: [scripts]
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: JMeter test plan (.jmx)
+                config:
+                  type: string
+                  description: JSON config blob
+                  example: '{"frameworkId":"fw-1"}'
+              additionalProperties:
+                type: string
+                format: binary
+                description: Additional CSV data files (field name = csv filename)
+      responses:
+        '200':
+          description: Script stored successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [scriptName]
+                properties:
+                  scriptName:
+                    type: string
+                    description: Stored filename to use in `POST /api/projects/:projectId/tests`
+                    example: "checkout.jmx"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  # ── Projects ─────────────────────────────────────────────────────────────────
+
+  /api/projects:
+    get:
+      operationId: listProjects
+      summary: List all projects
+      tags: [projects]
+      responses:
+        '200':
+          description: All projects
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data]
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Project'
+
+    post:
+      operationId: createProject
+      summary: Create a project
+      tags: [projects]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                  example: "Checkout flow"
+                description:
+                  type: string
+                  example: "End-to-end checkout load tests"
+      responses:
+        '201':
+          description: Project created
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [project]
+                properties:
+                  project:
+                    $ref: '#/components/schemas/Project'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /api/projects/{projectId}:
+    get:
+      operationId: getProject
+      summary: Get a project with its tests
+      tags: [projects]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+      responses:
+        '200':
+          description: Project detail including all tests
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [project, tests]
+                properties:
+                  project:
+                    $ref: '#/components/schemas/Project'
+                  tests:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Test'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    put:
+      operationId: updateProject
+      summary: Update project name or description
+      tags: [projects]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Updated project
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [project]
+                properties:
+                  project:
+                    $ref: '#/components/schemas/Project'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      operationId: deleteProject
+      summary: Delete a project and all its tests
+      tags: [projects]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+      responses:
+        '200':
+          $ref: '#/components/responses/Ok'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ── Tests ────────────────────────────────────────────────────────────────────
+
+  /api/projects/{projectId}/tests:
+    post:
+      operationId: createTest
+      summary: Create a test within a project
+      description: |
+        The JMX script and CSV files must already be uploaded via `POST /api/upload/script`.
+        Set `scriptName` to the value returned by that call.
+      tags: [tests]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, scriptName]
+              properties:
+                name:
+                  type: string
+                  example: "500 VU smoke"
+                scriptName:
+                  type: string
+                  example: "checkout.jmx"
+                frameworkId:
+                  type: string
+                  example: "fw-1"
+      responses:
+        '201':
+          description: Test created
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [test]
+                properties:
+                  test:
+                    $ref: '#/components/schemas/Test'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/projects/{projectId}/tests/{testId}:
+    put:
+      operationId: updateTest
+      summary: Update a test
+      tags: [tests]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/testId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                frameworkId:
+                  type: string
+                  nullable: true
+      responses:
+        '200':
+          description: Updated test
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [test]
+                properties:
+                  test:
+                    $ref: '#/components/schemas/Test'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      operationId: deleteTest
+      summary: Delete a test
+      tags: [tests]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/testId'
+      responses:
+        '200':
+          $ref: '#/components/responses/Ok'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/projects/{projectId}/tests/{testId}/run:
+    post:
+      operationId: startRun
+      summary: Start a test run
+      description: |
+        Dispatches the test's JMX script to the selected (or all connected) agents and
+        starts JMeter in non-GUI mode on each.
+
+        After this call:
+        - `GET /api/run/active` returns the new runId with `active: true`
+        - The WebSocket begins emitting `metric` and `log_line` messages
+        - `{ "status": "running", "agent_id": "..." }` is broadcast to all WS clients
+      tags: [runs]
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+        - $ref: '#/components/parameters/testId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                agentIds:
+                  type: array
+                  items:
+                    type: string
+                  description: Agents to dispatch to. Omit to use all connected agents.
+                  example: ["agent-1", "agent-2"]
+      responses:
+        '200':
+          description: Run started
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [runId]
+                properties:
+                  runId:
+                    type: string
+                    example: "run-xyz789"
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          description: Another run is already active
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  # ── Frameworks ───────────────────────────────────────────────────────────────
+
+  /api/frameworks:
+    get:
+      operationId: listFrameworks
+      summary: List all frameworks
+      tags: [frameworks]
+      responses:
+        '200':
+          description: All frameworks
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data]
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Framework'
+
+    post:
+      operationId: createFramework
+      summary: Import a framework bundle
+      tags: [frameworks]
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                  example: "JSR223 Groovy Bundle"
+                description:
+                  type: string
+                  example: "Pre-built Groovy scripting plugins"
+                version:
+                  type: string
+                  example: "1.4.0"
+                file:
+                  type: string
+                  format: binary
+                  description: Plugin bundle (.jar or .zip)
+      responses:
+        '201':
+          description: Framework created
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [framework]
+                properties:
+                  framework:
+                    $ref: '#/components/schemas/Framework'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /api/frameworks/{frameworkId}:
+    get:
+      operationId: getFramework
+      summary: Get a single framework
+      tags: [frameworks]
+      parameters:
+        - $ref: '#/components/parameters/frameworkId'
+      responses:
+        '200':
+          description: Framework detail
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [framework]
+                properties:
+                  framework:
+                    $ref: '#/components/schemas/Framework'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      operationId: deleteFramework
+      summary: Delete a framework
+      description: The framework can still be deleted even if tests reference it; the test's `frameworkId` becomes a dangling reference.
+      tags: [frameworks]
+      parameters:
+        - $ref: '#/components/parameters/frameworkId'
+      responses:
+        '200':
+          $ref: '#/components/responses/Ok'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ── Runs ─────────────────────────────────────────────────────────────────────
+
+  /api/run/active:
+    get:
+      operationId: getActiveRun
+      summary: Get the currently active run
+      tags: [runs]
+      responses:
+        '200':
+          description: Active run state
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [active, runId]
+                properties:
+                  active:
+                    type: boolean
+                  runId:
+                    type: string
+                    nullable: true
+                    example: "run-xyz789"
+
+  /api/run/{runId}/stop:
+    post:
+      operationId: stopRun
+      summary: Stop a run immediately
+      description: |
+        Sends `StopTestNow` on port 4445 to every active agent. Partial JTL results are
+        collected and merged. After this call:
+        - `GET /api/run/active` returns `{ active: false, runId: null }`
+        - The WebSocket broadcasts `{ "status": "stopped", "agent_id": "SYSTEM" }`
+        - The run record's status is set to `stopped`
+      tags: [runs]
+      parameters:
+        - $ref: '#/components/parameters/runId'
+      responses:
+        '200':
+          $ref: '#/components/responses/Ok'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/runs/{runId}:
+    get:
+      operationId: getRun
+      summary: Get a run record by ID
+      description: Fetch a stored run record — active or historical — by its ID.
+      tags: [runs]
+      parameters:
+        - $ref: '#/components/parameters/runId'
+      responses:
+        '200':
+          description: Run record
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [run]
+                properties:
+                  run:
+                    $ref: '#/components/schemas/Run'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/history:
+    get:
+      operationId: listHistory
+      summary: List all historical runs
+      description: |
+        Returns all completed runs, most recent first.
+
+        ⚠ **Legacy:** field names are Go-default **PascalCase** (`ID`, `ScriptName`, etc.)
+        because the struct lacks `json:` tags. This should be normalised to camelCase
+        in a future revision — update the frontend's `TestRun` interface at the same time.
+      tags: [runs]
+      responses:
+        '200':
+          description: Run history
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data]
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TestRun'
+
+  # ── WebSocket ────────────────────────────────────────────────────────────────
+
+  /ws:
+    get:
+      operationId: websocket
+      summary: WebSocket — live metrics, logs, and run status
+      description: |
+        Upgrades to a WebSocket connection. The client connects once on app load and stays
+        connected; the hub reconnects automatically on drop (3-second backoff).
+
+        A `runId` query parameter can be passed to associate the connection with a specific run,
+        allowing the hub to replay partial state on reconnect.
+
+        ---
+
+        ### Server → Client messages
+
+        #### Metric tick
+        Emitted every ~1 second per agent while a run is active.
+        ```json
+        {
+          "type": "metric",
+          "data": {
+            "agent_id": "agent-sydney-1",
+            "requests": 1234,
+            "errors": 5,
+            "threads": 100
+          }
+        }
+        ```
+        All numeric fields are **cumulative totals** for the current run (not per-second deltas).
+        The frontend derives RPS / err-rate by comparing consecutive ticks.
+
+        #### Log line
+        A single line of stdout/stderr from an agent's JMeter process.
+        ```json
+        {
+          "log_line": "INFO o.a.j.e.StandardJMeterEngine: Running the test!",
+          "agent_id": "agent-sydney-1"
+        }
+        ```
+
+        #### Run status
+        Broadcast whenever the run lifecycle changes.
+        ```json
+        {
+          "status": "running",
+          "agent_id": "SYSTEM"
+        }
+        ```
+        Valid `status` values: `running` | `completed` | `failed` | `stopped`
+
+        ---
+
+        ### Client → Server messages
+
+        #### Command
+        Send an action command to an agent or the hub.
+        ```json
+        {
+          "action": "stop",
+          "targetAgentId": "agent-sydney-1"
+        }
+        ```
+        Valid `action` values: `start` | `stop`
+        `targetAgentId` is optional — omit to target all connected agents.
+      tags: [runs]
+      parameters:
+        - name: runId
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Associate this WebSocket connection with a specific run for state recovery.
+      responses:
+        '101':
+          description: Switching Protocols — WebSocket upgrade accepted
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+# ── Components ──────────────────────────────────────────────────────────────
+
+components:
+
+  parameters:
+    projectId:
+      name: projectId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Project ID
+
+    testId:
+      name: testId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Test ID
+
+    frameworkId:
+      name: frameworkId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Framework ID
+
+    runId:
+      name: runId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Run ID
+
+  responses:
+    Ok:
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [ok]
+            properties:
+              ok:
+                type: boolean
+                example: true
+
+    BadRequest:
+      description: Invalid request body or parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  schemas:
+
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          example: "project not found"
+
+    Project:
+      type: object
+      required: [id, name, createdAt, testCount]
+      properties:
+        id:
+          type: string
+          example: "proj-abc123"
+        name:
+          type: string
+          example: "Checkout flow"
+        description:
+          type: string
+          nullable: true
+          example: "End-to-end checkout load tests"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2026-06-01T00:00:00Z"
+        testCount:
+          type: integer
+          description: Denormalised count of tests belonging to this project
+          example: 3
+
+    Test:
+      type: object
+      required: [id, name, projectId, scriptName, createdAt]
+      properties:
+        id:
+          type: string
+          example: "test-def456"
+        name:
+          type: string
+          example: "500 VU smoke"
+        projectId:
+          type: string
+          example: "proj-abc123"
+        scriptName:
+          type: string
+          description: Filename of the JMX file stored on the hub
+          example: "checkout.jmx"
+        frameworkId:
+          type: string
+          nullable: true
+          description: ID of the framework bundle used by this test
+          example: "fw-1"
+        lastStatus:
+          type: string
+          nullable: true
+          enum: [running, completed, failed, stopped]
+          example: "completed"
+        lastRunAt:
+          type: string
+          format: date-time
+          nullable: true
+          example: "2026-06-08T14:00:00Z"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2026-06-01T00:00:00Z"
+
+    Framework:
+      type: object
+      required: [id, name, createdAt, usageCount]
+      properties:
+        id:
+          type: string
+          example: "fw-ghi789"
+        name:
+          type: string
+          example: "JSR223 Groovy Bundle"
+        description:
+          type: string
+          nullable: true
+          example: "Pre-built Groovy scripting plugins"
+        version:
+          type: string
+          nullable: true
+          example: "1.4.0"
+        pluginPath:
+          type: string
+          nullable: true
+          description: Absolute path to the stored .jar/.zip on the hub's filesystem
+          example: "/data/frameworks/fw-ghi789/groovy-bundle.jar"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2026-05-01T00:00:00Z"
+        usageCount:
+          type: integer
+          description: Number of tests currently referencing this framework
+          example: 4
+
+    Run:
+      type: object
+      required: [id, projectId, testId, scriptName, status, agentIds, startedAt]
+      properties:
+        id:
+          type: string
+          example: "run-xyz789"
+        projectId:
+          type: string
+          example: "proj-abc123"
+        testId:
+          type: string
+          example: "test-def456"
+        scriptName:
+          type: string
+          example: "checkout.jmx"
+        status:
+          type: string
+          enum: [running, completed, failed, stopped]
+          example: "completed"
+        agentIds:
+          type: array
+          items:
+            type: string
+          example: ["agent-sydney-1", "agent-virginia-2"]
+        startedAt:
+          type: string
+          format: date-time
+          example: "2026-06-09T10:00:00Z"
+        completedAt:
+          type: string
+          format: date-time
+          nullable: true
+          example: "2026-06-09T10:05:42Z"
+
+    # Legacy schema — GET /api/history returns Go-default PascalCase.
+    # Should be replaced with Run (camelCase) in a future revision.
+    TestRun:
+      type: object
+      required: [ID, ScriptName, Status, StartTime, EndTime, LogPath]
+      description: |
+        ⚠ Legacy PascalCase shape from Go structs without json tags.
+        Normalise to camelCase (matching Run schema) in a future revision.
+      properties:
+        ID:
+          type: string
+          example: "run-xyz789"
+        ScriptName:
+          type: string
+          example: "checkout.jmx"
+        Status:
+          type: string
+          example: "passed"
+        StartTime:
+          type: string
+          format: date-time
+          example: "2026-06-09T10:00:00Z"
+        EndTime:
+          type: string
+          format: date-time
+          example: "2026-06-09T10:05:42Z"
+        LogPath:
+          type: string
+          example: "/data/runs/run-xyz789/jmeter.log"
+
+    # WebSocket message schemas (informational — not used in REST paths)
+    WsMetricMessage:
+      type: object
+      required: [type, data]
+      properties:
+        type:
+          type: string
+          enum: [metric]
+        data:
+          type: object
+          required: [agent_id, requests, errors, threads]
+          properties:
+            agent_id:
+              type: string
+              example: "agent-sydney-1"
+            requests:
+              type: integer
+              description: Cumulative request count for this run
+              example: 12340
+            errors:
+              type: integer
+              description: Cumulative error count for this run
+              example: 15
+            threads:
+              type: integer
+              description: Current active thread count
+              example: 100
+
+    WsLogMessage:
+      type: object
+      required: [log_line, agent_id]
+      properties:
+        log_line:
+          type: string
+          description: Single line of JMeter stdout/stderr
+          example: "INFO o.a.j.e.StandardJMeterEngine: Running the test!"
+        agent_id:
+          type: string
+          example: "agent-sydney-1"
+
+    WsStatusMessage:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [running, completed, failed, stopped]
+          example: "completed"
+        agent_id:
+          type: string
+          description: Agent that triggered the status change, or "SYSTEM" for hub-initiated events
+          example: "SYSTEM"
+
+    WsCommandMessage:
+      type: object
+      required: [action]
+      description: Client → Server command
+      properties:
+        action:
+          type: string
+          enum: [start, stop]
+          example: "stop"
+        targetAgentId:
+          type: string
+          nullable: true
+          description: Target a specific agent. Omit to broadcast to all connected agents.
+          example: "agent-sydney-1"

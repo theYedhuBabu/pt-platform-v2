@@ -1,0 +1,68 @@
+2026-06-15 17:21:06,352 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-06-15 17:21:06,364 INFO o.a.j.JMeter: Loading user properties from: /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/bin/user.properties
+2026-06-15 17:21:06,366 INFO o.a.j.JMeter: Loading system properties from: /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/bin/system.properties
+2026-06-15 17:21:06,371 INFO o.a.j.JMeter: Setting JMeter property: agentId=agent-1
+2026-06-15 17:21:06,372 INFO o.a.j.JMeter: Setting JMeter property: agent_index=0
+2026-06-15 17:21:06,372 INFO o.a.j.JMeter: Setting JMeter property: runId=4bc98f01-cf73-4000-94b7-d3db9cde37f4
+2026-06-15 17:21:06,372 INFO o.a.j.JMeter: Setting JMeter property: script=src/scripts/templateScript.jmx
+2026-06-15 17:21:06,372 INFO o.a.j.JMeter: Setting JMeter property: summariser.interval=5
+2026-06-15 17:21:06,372 INFO o.a.j.JMeter: Setting JMeter property: total_agents=1
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: Version 5.6.3
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: java.version=21.0.11
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: os.name=Mac OS X
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: os.arch=aarch64
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: os.version=26.4
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: java.awt.headless=true
+2026-06-15 17:21:06,385 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-06-15 17:21:06,386 INFO o.a.j.JMeter: Available Processors =10
+2026-06-15 17:21:06,397 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-06-15 17:21:06,397 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-06-15 17:21:06,397 INFO o.a.j.JMeter: JMeterHome=/Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3
+2026-06-15 17:21:06,397 INFO o.a.j.JMeter: user.dir  =/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4bc98f01-cf73-4000-94b7-d3db9cde37f4
+2026-06-15 17:21:06,397 INFO o.a.j.JMeter: PWD       =/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4bc98f01-cf73-4000-94b7-d3db9cde37f4
+2026-06-15 17:21:06,400 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Yedhus-Mac-mini.local FullName: localhost
+2026-06-15 17:21:06,413 INFO o.a.j.s.FileServer: Default base='/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4bc98f01-cf73-4000-94b7-d3db9cde37f4'
+2026-06-15 17:21:06,414 INFO o.a.j.s.FileServer: Set new base='/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4bc98f01-cf73-4000-94b7-d3db9cde37f4/src/scripts'
+2026-06-15 17:21:06,481 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-06-15 17:21:06,497 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-06-15 17:21:06,498 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-06-15 17:21:06,499 INFO o.a.j.s.SaveService: Loading file: /Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4bc98f01-cf73-4000-94b7-d3db9cde37f4/src/scripts/templateScript.jmx
+2026-06-15 17:21:06,531 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-06-15 17:21:06,531 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-06-15 17:21:06,531 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-06-15 17:21:06,531 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-06-15 17:21:06,545 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-06-15 17:21:06,550 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-06-15 17:21:06,550 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-15 17:21:06,550 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-15 17:21:06,552 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-06-15 17:21:06,552 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-06-15 17:21:06,567 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-cmn-jmeter-0.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,582 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-parallel-0.12.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,585 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-kafka-backend-listener-1.0-SNAPSHOT.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,586 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/cmdrunner-2.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,586 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/json-lib-2.4-jdk15.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,592 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager-1.12.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,615 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-har-import-plugin-1.1.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,661 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,664 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-dummy-0.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-15 17:21:06,762 INFO o.a.j.JMeter: Running test (1781524266762)
+2026-06-15 17:21:06,770 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2026-06-15 17:21:06,770 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group Thread Group.
+2026-06-15 17:21:06,770 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-06-15 17:21:06,770 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=10 delayedStart=false
+2026-06-15 17:21:06,771 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-06-15 17:21:06,771 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-06-15 17:21:06,772 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2026-06-15 17:21:07,187 INFO o.a.j.r.Summariser: summary +      1 in 00:00:00 =    2.4/s Avg:   190 Min:   190 Max:   190 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-06-15 17:21:08,822 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2026-06-15 17:21:08,822 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2026-06-15 17:21:11,773 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2026-06-15 17:21:12,457 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-2
+2026-06-15 17:21:12,458 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2026-06-15 17:21:12,459 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-06-15 17:21:12,464 INFO o.a.j.r.Summariser: summary +      8 in 00:00:05 =    1.5/s Avg:   287 Min:    82 Max:   470 Err:     5 (62.50%) Active: 0 Started: 2 Finished: 2
+2026-06-15 17:21:12,464 INFO o.a.j.r.Summariser: summary =      9 in 00:00:06 =    1.6/s Avg:   277 Min:    82 Max:   470 Err:     5 (55.56%)

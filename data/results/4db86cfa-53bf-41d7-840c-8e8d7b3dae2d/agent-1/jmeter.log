@@ -1,0 +1,211 @@
+2026-06-18 09:59:49,071 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-06-18 09:59:49,083 INFO o.a.j.JMeter: Loading user properties from: /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/bin/user.properties
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Loading system properties from: /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/bin/system.properties
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Setting JMeter property: agentId=agent-1
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Setting JMeter property: agent_index=0
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Setting JMeter property: runId=4db86cfa-53bf-41d7-840c-8e8d7b3dae2d
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Setting JMeter property: script=src/scripts/templateScript.jmx
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Setting JMeter property: summariser.interval=5
+2026-06-18 09:59:49,084 INFO o.a.j.JMeter: Setting JMeter property: total_agents=1
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: Version 5.6.3
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: java.version=21.0.11
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: os.name=Mac OS X
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: os.arch=aarch64
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: os.version=26.4
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: java.awt.headless=true
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-06-18 09:59:49,090 INFO o.a.j.JMeter: Available Processors =10
+2026-06-18 09:59:49,096 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-06-18 09:59:49,096 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-06-18 09:59:49,096 INFO o.a.j.JMeter: JMeterHome=/Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3
+2026-06-18 09:59:49,096 INFO o.a.j.JMeter: user.dir  =/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4db86cfa-53bf-41d7-840c-8e8d7b3dae2d
+2026-06-18 09:59:49,096 INFO o.a.j.JMeter: PWD       =/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4db86cfa-53bf-41d7-840c-8e8d7b3dae2d
+2026-06-18 09:59:49,098 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Yedhus-Mac-mini.local FullName: localhost
+2026-06-18 09:59:49,126 INFO o.a.j.s.FileServer: Default base='/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4db86cfa-53bf-41d7-840c-8e8d7b3dae2d'
+2026-06-18 09:59:49,126 INFO o.a.j.s.FileServer: Set new base='/Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4db86cfa-53bf-41d7-840c-8e8d7b3dae2d/src/scripts'
+2026-06-18 09:59:49,192 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-06-18 09:59:49,205 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-06-18 09:59:49,206 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-06-18 09:59:49,207 INFO o.a.j.s.SaveService: Loading file: /Volumes/Sandisk_1TB/Work/PT-Platform-v2/runs/4db86cfa-53bf-41d7-840c-8e8d7b3dae2d/src/scripts/templateScript.jmx
+2026-06-18 09:59:49,238 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-06-18 09:59:49,238 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-06-18 09:59:49,238 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-06-18 09:59:49,238 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-06-18 09:59:49,251 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-06-18 09:59:49,256 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-06-18 09:59:49,256 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-18 09:59:49,256 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-18 09:59:49,258 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-06-18 09:59:49,258 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-06-18 09:59:49,273 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-cmn-jmeter-0.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,288 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-parallel-0.12.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,290 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-kafka-backend-listener-1.0-SNAPSHOT.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,291 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/cmdrunner-2.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,291 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/json-lib-2.4-jdk15.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,297 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager-1.12.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,319 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-har-import-plugin-1.1.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,363 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.1.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,366 INFO o.a.j.r.ClassFinder: Will scan jar /Volumes/Sandisk_1TB/Work/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-dummy-0.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-18 09:59:49,474 INFO o.a.j.v.b.BackendListener: Backend Listener: Starting worker with class: class com.example.java.KafkaBackendListenerClient and queue capacity: 5000
+2026-06-18 09:59:49,478 INFO o.a.j.v.b.BackendListener: Backend Listener: Started  worker with class: class com.example.java.KafkaBackendListenerClient
+2026-06-18 09:59:49,492 INFO o.a.k.c.p.ProducerConfig: Idempotence will be disabled because acks is set to 1, not set to 'all'.
+2026-06-18 09:59:49,493 INFO o.a.k.c.p.ProducerConfig: ProducerConfig values: 
+	acks = 1
+	auto.include.jmx.reporter = true
+	batch.size = 32768
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 67108864
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = lz4
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 10
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-06-18 09:59:49,514 INFO o.a.k.c.u.AppInfoParser: Kafka version: 3.6.1
+2026-06-18 09:59:49,514 INFO o.a.k.c.u.AppInfoParser: Kafka commitId: 5e3c2b738d253ff5
+2026-06-18 09:59:49,514 INFO o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1781756989513
+2026-06-18 09:59:49,522 INFO o.a.j.JMeter: Running test (1781756989522)
+2026-06-18 09:59:49,530 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2026-06-18 09:59:49,531 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group Thread Group.
+2026-06-18 09:59:49,531 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-06-18 09:59:49,531 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=10 delayedStart=false
+2026-06-18 09:59:49,534 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-06-18 09:59:49,534 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-06-18 09:59:49,536 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2026-06-18 09:59:49,666 INFO o.a.k.c.Metadata: [Producer clientId=producer-1] Cluster ID: NVoHhVbMRW-cy6JnUOXwpA
+2026-06-18 09:59:49,951 INFO o.a.j.r.Summariser: summary +      1 in 00:00:00 =    2.3/s Avg:   160 Min:   160 Max:   160 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-06-18 09:59:54,535 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-2
+2026-06-18 09:59:55,108 INFO o.a.j.r.Summariser: summary +     19 in 00:00:05 =    3.7/s Avg:   288 Min:    67 Max:   487 Err:    11 (57.89%) Active: 2 Started: 2 Finished: 0
+2026-06-18 09:59:55,109 INFO o.a.j.r.Summariser: summary =     20 in 00:00:06 =    3.6/s Avg:   282 Min:    67 Max:   487 Err:    11 (55.00%)
+2026-06-18 10:00:01,037 INFO o.a.j.r.Summariser: summary +     38 in 00:00:06 =    6.4/s Avg:   313 Min:    69 Max:   505 Err:    22 (57.89%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:01,039 INFO o.a.j.r.Summariser: summary =     58 in 00:00:12 =    5.0/s Avg:   302 Min:    67 Max:   505 Err:    33 (56.90%)
+2026-06-18 10:00:07,186 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    6.8/s Avg:   287 Min:    65 Max:   507 Err:    27 (64.29%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:07,187 INFO o.a.j.r.Summariser: summary =    100 in 00:00:18 =    5.7/s Avg:   296 Min:    65 Max:   507 Err:    60 (60.00%)
+2026-06-18 10:00:13,035 INFO o.a.j.r.Summariser: summary +     46 in 00:00:06 =    7.9/s Avg:   250 Min:    67 Max:   489 Err:    27 (58.70%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:13,036 INFO o.a.j.r.Summariser: summary =    146 in 00:00:24 =    6.2/s Avg:   281 Min:    65 Max:   507 Err:    87 (59.59%)
+2026-06-18 10:00:19,035 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    7.0/s Avg:   288 Min:    61 Max:   496 Err:    25 (59.52%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:19,036 INFO o.a.j.r.Summariser: summary =    188 in 00:00:30 =    6.4/s Avg:   283 Min:    61 Max:   507 Err:   112 (59.57%)
+2026-06-18 10:00:25,031 INFO o.a.j.r.Summariser: summary +     43 in 00:00:06 =    7.2/s Avg:   272 Min:    64 Max:   481 Err:    26 (60.47%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:25,031 INFO o.a.j.r.Summariser: summary =    231 in 00:00:36 =    6.5/s Avg:   281 Min:    61 Max:   507 Err:   138 (59.74%)
+2026-06-18 10:00:31,094 INFO o.a.j.r.Summariser: summary +     43 in 00:00:06 =    7.1/s Avg:   283 Min:    62 Max:   502 Err:    25 (58.14%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:31,096 INFO o.a.j.r.Summariser: summary =    274 in 00:00:42 =    6.6/s Avg:   281 Min:    61 Max:   507 Err:   163 (59.49%)
+2026-06-18 10:00:37,119 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    7.0/s Avg:   283 Min:    62 Max:   508 Err:    24 (57.14%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:37,119 INFO o.a.j.r.Summariser: summary =    316 in 00:00:48 =    6.6/s Avg:   281 Min:    61 Max:   508 Err:   187 (59.18%)
+2026-06-18 10:00:43,084 INFO o.a.j.r.Summariser: summary +     43 in 00:00:06 =    7.2/s Avg:   274 Min:    64 Max:   498 Err:    26 (60.47%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:43,085 INFO o.a.j.r.Summariser: summary =    359 in 00:00:54 =    6.7/s Avg:   280 Min:    61 Max:   508 Err:   213 (59.33%)
+2026-06-18 10:00:49,396 INFO o.a.j.r.Summariser: summary +     45 in 00:00:06 =    7.1/s Avg:   273 Min:    62 Max:   500 Err:    27 (60.00%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:49,397 INFO o.a.j.r.Summariser: summary =    404 in 00:01:00 =    6.7/s Avg:   280 Min:    61 Max:   508 Err:   240 (59.41%)
+2026-06-18 10:00:55,040 INFO o.a.j.r.Summariser: summary +     39 in 00:00:06 =    6.9/s Avg:   296 Min:    59 Max:   499 Err:    24 (61.54%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:00:55,042 INFO o.a.j.r.Summariser: summary =    443 in 00:01:06 =    6.8/s Avg:   281 Min:    59 Max:   508 Err:   264 (59.59%)
+2026-06-18 10:01:01,274 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    6.7/s Avg:   292 Min:    63 Max:   494 Err:    26 (61.90%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:01,274 INFO o.a.j.r.Summariser: summary =    485 in 00:01:12 =    6.8/s Avg:   282 Min:    59 Max:   508 Err:   290 (59.79%)
+2026-06-18 10:01:07,037 INFO o.a.j.r.Summariser: summary +     40 in 00:00:06 =    7.0/s Avg:   292 Min:    55 Max:   486 Err:    25 (62.50%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:07,038 INFO o.a.j.r.Summariser: summary =    525 in 00:01:18 =    6.8/s Avg:   283 Min:    55 Max:   508 Err:   315 (60.00%)
+2026-06-18 10:01:13,081 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    6.9/s Avg:   284 Min:    74 Max:   500 Err:    24 (57.14%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:13,081 INFO o.a.j.r.Summariser: summary =    567 in 00:01:24 =    6.8/s Avg:   283 Min:    55 Max:   508 Err:   339 (59.79%)
+2026-06-18 10:01:19,007 INFO o.a.j.r.Summariser: summary +     39 in 00:00:06 =    6.6/s Avg:   301 Min:    65 Max:   510 Err:    24 (61.54%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:19,008 INFO o.a.j.r.Summariser: summary =    606 in 00:01:29 =    6.8/s Avg:   284 Min:    55 Max:   510 Err:   363 (59.90%)
+2026-06-18 10:01:25,017 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    7.0/s Avg:   286 Min:    68 Max:   500 Err:    26 (61.90%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:25,018 INFO o.a.j.r.Summariser: summary =    648 in 00:01:35 =    6.8/s Avg:   284 Min:    55 Max:   510 Err:   389 (60.03%)
+2026-06-18 10:01:31,027 INFO o.a.j.r.Summariser: summary +     44 in 00:00:06 =    7.3/s Avg:   263 Min:    61 Max:   502 Err:    25 (56.82%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:31,027 INFO o.a.j.r.Summariser: summary =    692 in 00:01:42 =    6.8/s Avg:   283 Min:    55 Max:   510 Err:   414 (59.83%)
+2026-06-18 10:01:37,086 INFO o.a.j.r.Summariser: summary +     43 in 00:00:06 =    7.1/s Avg:   282 Min:    68 Max:   504 Err:    26 (60.47%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:37,087 INFO o.a.j.r.Summariser: summary =    735 in 00:01:48 =    6.8/s Avg:   283 Min:    55 Max:   510 Err:   440 (59.86%)
+2026-06-18 10:01:43,125 INFO o.a.j.r.Summariser: summary +     41 in 00:00:06 =    6.8/s Avg:   293 Min:    65 Max:   494 Err:    25 (60.98%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:43,126 INFO o.a.j.r.Summariser: summary =    776 in 00:01:54 =    6.8/s Avg:   283 Min:    55 Max:   510 Err:   465 (59.92%)
+2026-06-18 10:01:49,100 INFO o.a.j.r.Summariser: summary +     48 in 00:00:06 =    8.0/s Avg:   248 Min:    70 Max:   486 Err:    29 (60.42%) Active: 2 Started: 2 Finished: 0
+2026-06-18 10:01:49,101 INFO o.a.j.r.Summariser: summary =    824 in 00:02:00 =    6.9/s Avg:   281 Min:    55 Max:   510 Err:   494 (59.95%)
+2026-06-18 10:01:49,549 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-2
+2026-06-18 10:01:49,550 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-2
+2026-06-18 10:01:49,601 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Thread Group 1-1
+2026-06-18 10:01:49,601 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2026-06-18 10:01:49,602 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-06-18 10:01:49,607 INFO o.a.j.v.b.BackendListener: Worker ended
+2026-06-18 10:01:49,610 INFO o.a.k.c.p.KafkaProducer: [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 10000 ms.
+2026-06-18 10:01:49,616 INFO o.a.k.c.m.Metrics: Metrics scheduler closed
+2026-06-18 10:01:49,616 INFO o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-06-18 10:01:49,617 INFO o.a.k.c.m.Metrics: Metrics reporters closed
+2026-06-18 10:01:49,617 INFO o.a.k.c.u.AppInfoParser: App info kafka.producer for producer-1 unregistered
+2026-06-18 10:01:49,619 INFO o.a.j.r.Summariser: summary +      4 in 00:00:01 =    7.7/s Avg:   312 Min:    56 Max:   447 Err:     2 (50.00%) Active: 0 Started: 2 Finished: 2
+2026-06-18 10:01:49,619 INFO o.a.j.r.Summariser: summary =    828 in 00:02:00 =    6.9/s Avg:   281 Min:    55 Max:   510 Err:   496 (59.90%)
